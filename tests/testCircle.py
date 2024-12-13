@@ -34,14 +34,14 @@ class TestCircle:
 
         with pytest.raises(ValueError) as excinfo:
             circle.area(r)
-        assert str(excinfo.value) == "Radius mustn't be a null."
+        assert str(excinfo.value) == "Radius must be a positive number."
 
     def test_perimeter_zero_radius(self):
         r = 0
 
         with pytest.raises(ValueError) as excinfo:
             circle.perimeter(r)
-        assert str(excinfo.value) == "Radius mustn't be a null number."
+        assert str(excinfo.value) == "Radius must be a positive number."
 
     def test_circle_functions(self):
         try:
