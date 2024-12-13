@@ -16,7 +16,7 @@ sizes = {
 def sizesRight(fig,sizes):
         if any(size<=0 for size in sizes):
                 raise ValueError("Wrong sizes/неправильные размеры фигур, они должны быть больше нуля")
-        if fid=='triangle':
+        if fig=='triangle':
                 a,b,c=sizes
                 if not(a+b>c and b+c>a and a+c>b):
                         raise ValueError("wrong sizes for a triangle/введенные стороны не удовлетворяют правилу построения треугольника")
