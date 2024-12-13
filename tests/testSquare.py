@@ -21,28 +21,28 @@ class TestSquare:
 
         with pytest.raises(ValueError) as excinfo:
             square.area(a)
-        assert str(excinfo.value) == "Side must be positive."
+        assert str(excinfo.value) == "Side must be a positive number."
 
     def test_perimeter_invalid_negative_side(self):
         a = -1
 
         with pytest.raises(ValueError) as excinfo:
             square.perimeter(a)
-        assert str(excinfo.value) == "Side must be positive."
+        assert str(excinfo.value) == "Side must be a positive number."
 
     def test_area_zero_side(self):
         a = 0
 
         with pytest.raises(ValueError) as excinfo:
             square.area(a)
-        assert str(excinfo.value) == "Side must be positive."
+        assert str(excinfo.value) == "Side must be a positive number."
 
     def test_perimeter_zero_side(self):
         a = 0
 
         with pytest.raises(ValueError) as excinfo:
             square.perimeter(a)
-        assert str(excinfo.value) == "Side must be positive."
+        assert str(excinfo.value) == "Side must be a positive number."
 
     def test_square_functions(self):
         try:
