@@ -21,28 +21,28 @@ class TestTriangle:
 
         with pytest.raises(ValueError) as excinfo:
             area(a, b, c)
-        assert str(excinfo.value) == "Sides cannot form a triangle."
+        assert str(excinfo.value) == "The given sides do not form a valid triangle."
 
     def test_perimeter_invalid_negative_side(self):
         a, b, c = -1, 2, 3
 
         with pytest.raises(ValueError) as excinfo:
             perimeter(a, b, c)
-        assert str(excinfo.value) == "Sides cannot form a triangle."
+        assert str(excinfo.value) == "Sides must be positive numbers."
 
     def test_area_zero_side(self):
         a, b, c = 0, 2, 3
 
         with pytest.raises(ValueError) as excinfo:
             area(a, b, c)
-        assert str(excinfo.value) == "Sides cannot form a triangle."
+        assert str(excinfo.value) == "Sides must be positive numbers."
 
     def test_perimeter_zero_side(self):
         a, b, c = 0, 2, 3
 
         with pytest.raises(ValueError) as excinfo:
             perimeter(a, b, c)
-        assert str(excinfo.value) == "Sides cannot form a triangle."
+        assert str(excinfo.value) == "Sides must be positive numbers."
 
     def test_triangle_functions(self):
         try:
