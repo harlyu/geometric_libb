@@ -36,18 +36,11 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run tests
-        run: |
-          pytest
+        run: python -m unittest discover -s tests -v
 
       - name: Check code style
         run: |
           pip install flake8
           flake8 .
-
-      - name: Format code (if necessary)
-        if: ${{ failure() }}
-        run: |
-          pip install black
-          black .
           
         
